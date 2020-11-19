@@ -1,0 +1,72 @@
+.topnav{
+	color: white;
+	font-size: 24px;
+	vertical-align: baseline;
+	font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+	width: 148px;
+	height: 68px;
+	background: url("../img/logoAlchoolimp.png") no-repeat;
+	background-size: 148px 68px;
+	cursor: pointer;
+}
+
+
+
+.textcontent{
+	color: white;
+	font-size: 24px;
+	vertical-align: baseline;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+
+.buttonsMoi{
+	color: white;
+	font-size: 24px;
+	vertical-align: baseline;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../img/700-nw.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: 70%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bgtexttitle{
+	background-color: #001732;
+}
+
+.bgtext{
+	background-color: #001732;
+	opacity: 0.75;
+}
+
+.unsee{
+	opacity: 0;
+}
+
+.inputfield{
+	background-color: #002650;
+	box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+	border-color:  #002650;
+}
