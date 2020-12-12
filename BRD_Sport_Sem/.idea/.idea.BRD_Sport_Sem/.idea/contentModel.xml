@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Тимур\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Тимур\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_BRD_Sport_Sem.801440238.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Тимур\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Тимур\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Тимур\RiderProjects\BRD_Sport_Sem" t="IncludeFlat">
+      <e p="BRD_Sport_Sem" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BRD_Sport_Sem.csproj" t="IncludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
+          <e p="ForumController.cs" t="Include" />
+          <e p="IndexController.cs" t="Include" />
+          <e p="RecordsController.cs" t="Include" />
+          <e p="TournamentsController.cs" t="Include" />
+        </e>
+        <e p="DataGate" t="Include">
+          <e p="DataGate" t="Include">
+            <e p="Core" t="Include">
+              <e p="Attributes" t="Include">
+                <e p="DataRelationAttribute.cs" t="Include" />
+                <e p="DefaultOnInsertAttribute.cs" t="Include" />
+                <e p="Id.cs" t="Include" />
+              </e>
+              <e p="CommandBuilder.cs" t="Include" />
+              <e p="DataContext.cs" t="Include" />
+              <e p="DataContextExecutor.cs" t="Include" />
+              <e p="DataContextReceiver.cs" t="Include" />
+              <e p="DataGateConnectionContext.cs" t="Include" />
+              <e p="DataGateORM.cs" t="Include" />
+              <e p="DataGateRegistry.cs" t="Include" />
+              <e p="DbContainer.cs" t="Include" />
+              <e p="DbObject.cs" t="Include" />
+              <e p="ExpressionParser.cs" t="Include" />
+              <e p="ExpressionParserVisitor.cs" t="Include" />
+              <e p="QueryBuilder.cs" t="Include" />
+              <e p="TableTypeRelationship.cs" t="Include" />
+              <e p="Transaction.cs" t="Include" />
+              <e p="TransactionService.cs" t="Include" />
+              <e p="TypeRegistry.cs" t="Include" />
+            </e>
+            <e p="Utils" t="Include">
+              <e p="ConfigureExtensions.cs" t="Include" />
+              <e p="ReflectionFinder.cs" t="Include" />
+              <e p="ReflectionUtils.cs" t="Include" />
+              <e p="VariableInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Models" t="Include">
+          <e p="Forum.cs" t="Include" />
+          <e p="LoginModel.cs" t="Include" />
+          <e p="Record.cs" t="Include" />
+          <e p="RegisterModel.cs" t="Include" />
+          <e p="Tournament.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="ViewModel" t="Include">
+            <e p="ProfileViewModel.cs" t="Include" />
+          </e>
+        </e>
+        <e p="MVCPattern" t="Include">
+          <e p="ActionResult.cs" t="Include" />
+          <e p="ActionResults" t="Include">
+            <e p="ContentResult.cs" t="Include" />
+            <e p="FileResult.cs" t="Include" />
+            <e p="JSONContentResult.cs" t="Include" />
+            <e p="JSONResult.cs" t="Include" />
+            <e p="RedirectResult.cs" t="Include" />
+            <e p="StatusResult.cs" t="Include" />
+            <e p="StreamResult.cs" t="Include" />
+            <e p="VIewResult.cs" t="Include" />
+          </e>
+          <e p="Attributes" t="Include">
+            <e p="ActionAttribute.cs" t="Include" />
+            <e p="ControllerAttribute.cs" t="Include" />
+            <e p="RequiredAttribute.cs" t="Include" />
+            <e p="ValidateMethodAttribute.cs" t="Include" />
+          </e>
+          <e p="Controller.cs" t="Include" />
+          <e p="DefaultActionActivator.cs" t="Include" />
+          <e p="DefaultControllerActivator.cs" t="Include" />
+          <e p="DynamicViewBag.cs" t="Include" />
+          <e p="IActionActivator.cs" t="Include" />
+          <e p="IControllerActivator.cs" t="Include" />
+          <e p="ModelBindingState.cs" t="Include" />
+          <e p="ModelBindingStateBuilder.cs" t="Include" />
+          <e p="README.md" t="Include" />
+          <e p="RouteHelper.cs" t="Include" />
+          <e p="ServiceCollectionMVCPatternExtension.cs" t="Include" />
+          <e p="Services" t="Include">
+            <e p="ActionResultProvider.cs" t="Include" />
+            <e p="FormDataJsonValueProviderSource.cs" t="Include" />
+            <e p="FormFilesProviderSource.cs" t="Include" />
+            <e p="FormValueProviderSource.cs" t="Include" />
+            <e p="QueryValueProviderSource.cs" t="Include" />
+            <e p="RouteValueProviderSource.cs" t="Include" />
+            <e p="ValueProviderSource.cs" t="Include" />
+            <e p="ViewRenderService.cs" t="Include" />
+          </e>
+          <e p="ValueBindingResult.cs" t="Include" />
+          <e p="ValueProvider.cs" t="Include" />
+          <e p="ValueProviderBuilder.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="BRD_Sport_Sem.AssemblyInfo.cs" t="Include" />
+              <e p="BRD_Sport_Sem.RazorAssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Account" t="Include">
+            <e p="Login.cshtml" t="Include" />
+            <e p="Profile.cshtml" t="Include" />
+            <e p="Profile.cshtml.cs" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+          </e>
+          <e p="ArticleList.cshtml" t="Include" />
+          <e p="ArticleList.cshtml.cs" t="Include" />
+          <e p="Error.cshtml" t="Include" />
+          <e p="Error.cshtml.cs" t="Include" />
+          <e p="HPersons.cshtml" t="Include" />
+          <e p="HPersons.cshtml.cs" t="Include" />
+          <e p="Index" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Privacy.cshtml" t="Include" />
+          <e p="Privacy.cshtml.cs" t="Include" />
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+          </e>
+          <e p="TweetPage.cshtml" t="Include" />
+          <e p="TweetPage.cshtml.cs" t="Include" />
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+            <e p="style.css" t="Include" />
+          </e>
+          <e p="DefaultImage.jpg" t="Include" />
+          <e p="favicon.ico" t="Include" />
+          <e p="img" t="Include">
+            <e p="700-nw.png" t="Include" />
+            <e p="logo.png" t="Include" />
+            <e p="logoAlchoolimp.png" t="Include" />
+          </e>
+          <e p="js" t="Include">
+            <e p="site.js" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="dist" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap-grid.css" t="Include" />
+                  <e p="bootstrap-grid.css.map" t="Include" />
+                  <e p="bootstrap-grid.min.css" t="Include" />
+                  <e p="bootstrap-grid.min.css.map" t="Include" />
+                  <e p="bootstrap-reboot.css" t="Include" />
+                  <e p="bootstrap-reboot.css.map" t="Include" />
+                  <e p="bootstrap-reboot.min.css" t="Include" />
+                  <e p="bootstrap-reboot.min.css.map" t="Include" />
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                  <e p="bootstrap.min.css.map" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.bundle.js" t="Include" />
+                  <e p="bootstrap.bundle.js.map" t="Include" />
+                  <e p="bootstrap.bundle.min.js" t="Include" />
+                  <e p="bootstrap.bundle.min.js.map" t="Include" />
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.js.map" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                  <e p="bootstrap.min.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="LICENSE" t="Include" />
+            </e>
+            <e p="jquery" t="Include">
+              <e p="dist" t="Include">
+                <e p="jquery.js" t="Include" />
+                <e p="jquery.min.js" t="Include" />
+                <e p="jquery.min.map" t="Include" />
+              </e>
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+            <e p="jquery-validation" t="Include">
+              <e p="dist" t="Include">
+                <e p="additional-methods.js" t="Include" />
+                <e p="additional-methods.min.js" t="Include" />
+                <e p="jquery.validate.js" t="Include" />
+                <e p="jquery.validate.min.js" t="Include" />
+              </e>
+              <e p="LICENSE.md" t="Include" />
+            </e>
+            <e p="jquery-validation-unobtrusive" t="Include">
+              <e p="jquery.validate.unobtrusive.js" t="Include" />
+              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="BRD_Sport_Sem.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

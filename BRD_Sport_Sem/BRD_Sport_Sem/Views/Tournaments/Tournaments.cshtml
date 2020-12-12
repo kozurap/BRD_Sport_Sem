@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="text-center">
+    <h1 class="display-4">Соревнования</h1>
+</div>
+<div>
+    <table class="table table-light">
+        <thead>
+            <tr>
+                <th scope="col">Название</th>
+                <th scope="col">Дата</th>
+            </tr>
+        </thead>
+        <tbody id="TData">
+        </tbody>
+    </table>
+</div>
+<div>
+    <form action="https://localhost:44371/Tournament" method="post">
+        <input type="text" name="Name" id="PostDisc" required>
+        <input type="text" name="Date" id="PostName" required>
+        <button id="MakeTour" formmethod="post">Post</button>
+    </form>
+</div>
+
+
+<div>
+    <input type="text" name="Name" id="SrcName" required>
+    <button id="FindTour">Post</button>
+    <h3 class="display-4">Результаты поиска:</h3>
+</div>
+
+<div>
+    <table id="SrcTourTable" class="table table-light">
+        <thead>
+            <tr>
+                <th scope="col">Дисциплина</th>
+                <th scope="col">РЕКОРДСМЕН</th>
+            </tr>
+        </thead>
+        <tbody id="TSData">
+        </tbody>
+    </table>
+</div>

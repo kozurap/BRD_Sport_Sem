@@ -1,0 +1,40 @@
+﻿<div class="text-center">
+    <h1 class="display-4">Наши Рекорды</h1>
+</div>
+<div>
+    <table class="table table-light">
+        <thead>
+            <tr>
+                <th scope="col">Дисциплина</th>
+                <th scope="col">РЕКОРДСМЕН</th>
+            </tr>
+        </thead>
+        <tbody id="RData">
+        </tbody>
+    </table>
+</div>
+<div>
+    <form action="https://localhost:44371/Records" method="post">
+        <input type="text" name="Name" id="PostDisc" required>
+        <input type="text" name="Author" id="PostName" required>
+        <button id="MakeRec" formmethod="post">Post</button>
+    </form>
+</div>
+<div>
+    <input type="text" name="Author" id="SearchAuthor" required>
+    <button id="FindRec">Post</button>
+    <h3 class="display-4">Результаты поиска:</h3>
+</div>
+
+<div>
+    <table id="SrcTable" class="table table-light">
+        <thead>
+            <tr>
+                <th scope="col">Дисциплина</th>
+                <th scope="col">РЕКОРДСМЕН</th>
+            </tr>
+        </thead>
+        <tbody id="RSData">
+        </tbody>
+    </table>
+</div>
