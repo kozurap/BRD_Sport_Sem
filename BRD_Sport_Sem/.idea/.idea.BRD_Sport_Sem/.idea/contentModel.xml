@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Тимур\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Тимур\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_BRD_Sport_Sem.801440238.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Тимур\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\Тимур\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\Тимур\RiderProjects\BRD_Sport_Sem" t="IncludeFlat">
+    <e p="C:\Users\timur\BRD_Sport_Sem\BRD_Sport_Sem" t="IncludeFlat">
       <e p="BRD_Sport_Sem" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -56,6 +52,8 @@
           <e p="LoginModel.cs" t="Include" />
           <e p="Record.cs" t="Include" />
           <e p="RegisterModel.cs" t="Include" />
+          <e p="TopicMessageModel.cs" t="Include" />
+          <e p="TopicName.cs" t="Include" />
           <e p="Tournament.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="ViewModel" t="Include">
@@ -124,26 +122,34 @@
           <e p="Account" t="Include">
             <e p="Login.cshtml" t="Include" />
             <e p="Profile.cshtml" t="Include" />
-            <e p="Profile.cshtml.cs" t="Include" />
+            <e p="ProfileEdit.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
           </e>
           <e p="ArticleList.cshtml" t="Include" />
           <e p="ArticleList.cshtml.cs" t="Include" />
+          <e p="DisciplinesList.cshtml" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />
-          <e p="HPersons.cshtml" t="Include" />
-          <e p="HPersons.cshtml.cs" t="Include" />
+          <e p="Forum" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Forum.cshtml" t="Include" />
+            <e p="Topic.cshtml" t="Include" />
+          </e>
           <e p="Index" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Privacy.cshtml" t="Include" />
           <e p="Privacy.cshtml.cs" t="Include" />
+          <e p="Records" t="Include">
+            <e p="Records.cshtml" t="Include" />
+          </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           </e>
-          <e p="TweetPage.cshtml" t="Include" />
-          <e p="TweetPage.cshtml.cs" t="Include" />
+          <e p="Tournaments" t="Include">
+            <e p="Tournaments.cshtml" t="Include" />
+          </e>
         </e>
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
@@ -158,6 +164,7 @@
             <e p="logoAlchoolimp.png" t="Include" />
           </e>
           <e p="js" t="Include">
+            <e p="editProfile.js" t="Include" />
             <e p="site.js" t="Include" />
           </e>
           <e p="lib" t="Include">
@@ -218,5 +225,9 @@
       <e p="BRD_Sport_Sem.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
+    <e p="C:\Users\Тимур\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Тимур\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_BRD_Sport_Sem.79993265.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Тимур\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Тимур\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
   </component>
 </project>

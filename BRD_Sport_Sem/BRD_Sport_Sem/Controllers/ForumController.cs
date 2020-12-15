@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using BRD_Sport_Sem.Models;
 using DataGate.Core;
@@ -90,10 +91,13 @@ namespace BRD_Sport_Sem.Controllers
             connection.Close();
             return View("Topic");
         }
-
+        
         [Action("~/Create", Method = MethodType.GET)]
         public IActionResult CreateTopic()
         {
+            string token = Context.Session.GetString("AuthToken");
+            if (token == null)
+                return Redirect(Url("~/Account/Login"));
             return View("Create");
         }
         [Action("/Create", Method = MethodType.POST)]
@@ -101,7 +105,7 @@ namespace BRD_Sport_Sem.Controllers
         {
             string token = Context.Session.GetString("AuthToken");
             if (token == null)
-                Redirect(Url("~/Account/Login"));
+                return Redirect(Url("~/Account/Login"));
             var uquery = _db.Get<User>();
             List<User> users = uquery.Where(u => u.Email == token).ToList().Values.ToList();
             if (users.Count == 0)

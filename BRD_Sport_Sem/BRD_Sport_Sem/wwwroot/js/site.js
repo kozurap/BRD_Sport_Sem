@@ -12,7 +12,7 @@ $(document).ready(function () {
     
     $.ajax({
         type: "GET",
-        url: "https://localhost:44371/Records/GetList",
+        url: "https://localhost:5001/Records/GetList",
         success: (data, status) => { getRecTable(data, status) }
     });
 
@@ -24,7 +24,7 @@ $(document).ready(function () {
     };
     $.ajax({
         type: "GET",
-        url: "https://localhost:44371/Tournament/GetList",
+        url: "https://localhost:5001/Tournament/GetList",
         success: (data, status) => { getTourTable(data, status) }
     });
 
@@ -48,7 +48,7 @@ $(document).ready(function () {
                 author: author
             },
             contentType: "application/json; charset=utf-8",
-            url: "https://localhost:44371/Records/SearchByAuthor",
+            url: "https://localhost:5001/Records/SearchByAuthor",
             success: (data, status) => { getSRecTable(data, status) }
         });
         return false;
@@ -71,7 +71,7 @@ $(document).ready(function () {
                 name: name
             },
             contentType: "application/json; charset=utf-8",
-            url: "https://localhost:44371/Tournament/SearchTour",
+            url: "https://localhost:5001/Tournament/SearchTour",
             success: (data, status) => { getSTourTable(data, status) }
         });
         return false;
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "https://localhost:44371/Forum/GetTopics",
+        url: "https://localhost:5001/Forum/GetTopics",
         success: function (data, status) {
             console.log(data);
             let str ="";
@@ -94,7 +94,7 @@ $(document).ready(function () {
     //Topic View
     if (document.querySelector('#FList')) {
         document.querySelector('#FList').addEventListener('click', function (e) {
-            var url = "https://localhost:44371/Forum/Topic/" + e.target.id;
+            var url = "https://localhost:5001/Forum/Topic/" + e.target.id;
             console.log(url);
             localStorage.setItem('url', url);
             localStorage.setItem('id', e.target.id);
@@ -121,7 +121,7 @@ $(document).ready(function () {
         var message = document.getElementById("PostMessage").value;
         let b = localStorage.getItem('id').toString();
         $.ajax({
-            url: "https://localhost:44371/Forum/Topic",
+            url: "https://localhost:5001/Forum/Topic",
             type: "POST",
             data: {id: b,message: message},
             

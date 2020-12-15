@@ -29,6 +29,9 @@ namespace BRD_Sport_Sem.Controllers
         [Action("Login", Method = MethodType.GET)]
         public IActionResult Login()
         {
+            var token = Context.Session.GetString("AuthToken");
+            if (token != null)
+                 return Redirect(Url("~/Account/Profile"));
             return View("Login");
         }
 
@@ -106,20 +109,45 @@ namespace BRD_Sport_Sem.Controllers
             User user = query.ToList().Values.FirstOrDefault(u => u.Email == token);
             if (user != null)
             {
-                return View("Profile", ProfileViewModel.GetFromUserModel(user));
+                return View("Profile",ProfileViewModel.GetFromUserModel(user));
             }
 
             return Redirect(Url("~/Account/Login"));
         }
-
-        [Action("ProfileEdit", Method = MethodType.POST)]
-        public async Task<IActionResult> ProfileEdit(IFormFile file)
+        [Action("Profile/{id}/ProfileEdit", Method = MethodType.GET)]
+        public IActionResult ProfileEdit()
         {
             string token = Context.Session.GetString("AuthToken");
             if (token == null)
                 Redirect(Url("~/Account/Login"));
             var query = _db.Get<User>();
             User user = query.ToList().Values.FirstOrDefault(u => u.Email == token);
+            if (user != null)
+            {
+                return View("ProfileEdit",ProfileViewModel.GetFromUserModel(user));
+            }
+
+            return Redirect(Url("~/Account/Login"));
+        }
+
+        [Action("Profile/{id}/ProfileEdit", Method = MethodType.POST)]
+        public async Task<IActionResult> ProfileEdit(IFormFile file)
+        {
+            string token = Context.Session.GetString("AuthToken");
+            if (token == null)
+                Redirect(Url("~/Account/Login"));
+            var users = _db.Get<User>()
+                .Where(u => u.Email == token).ToList();
+
+            if (users.Count == 0)
+                return Status(404);
+
+            if (users.Count > 1)
+                return ServerError();
+
+            var userObj = users[0];
+            var user = userObj.Value;
+
             if(user == null)
                 Redirect(Url("~/Account/Login"));
             if (file != null)
@@ -128,16 +156,16 @@ namespace BRD_Sport_Sem.Controllers
                 await file.CopyToAsync(ms);
                 user.ProfileImage = ms.ToArray();
             }
+            userObj.Update();
 
             return Redirect(Url("~/Account/Profile"));
         }
 
         [Action("/{id}/Image")] //Account/{id}/Image
-        public IActionResult GetUserImage(int token)
+        public IActionResult GetUserImage(int id)
         {
             var users = _db.Get<User>()
-                .Where(u => u.Id == token).ToList();
-
+                .Where(u => u.Id == id).ToList();
             if (users.Count == 0)
                 return Status(404);
 
@@ -149,6 +177,13 @@ namespace BRD_Sport_Sem.Controllers
                 return File("/wwwroot/DefaultImage.jpg");
 
             return Stream(new MemoryStream(user.ProfileImage));
+        }
+
+        [Action("~/Logout")]
+        public IActionResult Logout()
+        {
+            Context.Session.Clear();
+            return Redirect(Url("~/"));
         }
     }
 }

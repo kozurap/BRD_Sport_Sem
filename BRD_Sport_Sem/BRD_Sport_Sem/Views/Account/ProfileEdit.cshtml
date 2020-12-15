@@ -1,0 +1,54 @@
+﻿@model BRD_Sport_Sem.Models.ViewModel.ProfileViewModel
+
+@{
+ViewData["title"] = "Редактирование профиля";
+}
+
+<section class="section_login uk-section">
+<div class="uk-container">
+<div class="uk-margin-medium-bottom">
+<h1>Редактирование профиля</h1>
+</div>
+<div class="uk-flex uk-flex-between">
+<div class="uk-width-1-2">
+<div class="uk-card uk-card-default uk-card-hover">
+<div class="uk-card-media-top">
+<img
+class="profile-image-preview"
+src="@Url.Content($"~/Account/{Model.UserId}/image")"
+alt=""
+style="width: 600px; height: 400px; object-fit: cover"
+/>
+</div>
+
+<div class="uk-card-body">
+<form action="" method="post" enctype="multipart/form-data">
+<div class="uk-margin">
+<div class="uk-width-1-1" uk-form-custom="target: true">
+<input
+name="file"
+type="file"
+class="file-input_image"/>
+<input
+class="uk-input"
+type="text"
+placeholder="Выберите фото"
+disabled/>
+</div>
+</div>
+<div class="uk-margin">
+<button class="uk-button uk-width-1-1" type="submit">
+Сохранить
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+@section Scripts
+{
+<script src="~/js/editProfile.js"></script>
+}
