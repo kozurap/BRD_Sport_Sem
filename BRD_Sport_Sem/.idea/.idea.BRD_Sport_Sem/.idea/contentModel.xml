@@ -9,6 +9,7 @@
         <e p="BRD_Sport_Sem.csproj" t="IncludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="AccountController.cs" t="Include" />
+          <e p="Disciplines.cs" t="Include" />
           <e p="DisciplinesController.cs" t="Include" />
           <e p="ForumController.cs" t="Include" />
           <e p="IndexController.cs" t="Include" />
