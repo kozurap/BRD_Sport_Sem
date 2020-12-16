@@ -9,6 +9,7 @@
         <e p="BRD_Sport_Sem.csproj" t="IncludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="AccountController.cs" t="Include" />
+          <e p="DisciplinesController.cs" t="Include" />
           <e p="ForumController.cs" t="Include" />
           <e p="IndexController.cs" t="Include" />
           <e p="RecordsController.cs" t="Include" />
@@ -127,7 +128,16 @@
           </e>
           <e p="ArticleList.cshtml" t="Include" />
           <e p="ArticleList.cshtml.cs" t="Include" />
-          <e p="DisciplinesList.cshtml" t="Include" />
+          <e p="Disciplines" t="Include">
+            <e p="AlcoChess.cshtml" t="Include" />
+            <e p="BeerMarathon.cshtml" t="Include" />
+            <e p="BeerMile.cshtml" t="Include" />
+            <e p="BeerPong.cshtml" t="Include" />
+            <e p="DisciplinesList.cshtml" t="Include" />
+            <e p="HundredLiters.cshtml" t="Include" />
+            <e p="Literball.cshtml" t="Include" />
+            <e p="WomenGlue.cshtml" t="Include" />
+          </e>
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />
           <e p="Forum" t="Include">
@@ -159,7 +169,6 @@
           <e p="DefaultImage.jpg" t="Include" />
           <e p="favicon.ico" t="Include" />
           <e p="img" t="Include">
-            <e p="700-nw.png" t="Include" />
             <e p="logo.png" t="Include" />
             <e p="logoAlchoolimp.png" t="Include" />
           </e>
