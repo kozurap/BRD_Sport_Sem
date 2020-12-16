@@ -27,18 +27,35 @@ namespace BRD_Sport_Sem.Controllers
         }
 
         [Action("Login", Method = MethodType.GET)]
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
             var token = Context.Session.GetString("AuthToken");
             if (token != null)
                  return Redirect(Url("~/Account/Profile"));
+            if (Context.Request.Cookies.ContainsKey("name") && Context.Request.Cookies.ContainsKey("password"))
+            {
+                LoginModel model = new LoginModel()
+                {
+                    Email = Context.Request.Cookies["name"],
+                    Password = Context.Request.Cookies["password"]
+                };
+                User user = _db.Get<User>().ToList().Values.FirstOrDefault(u => u.Email == model.Email);
+                if (user != null)
+                {
+                    if (model.Password == user.Password)
+                    {
+                        await Authenticate(model.Email);
+                        return Redirect(Url("~/Account/Profile"));
+                    }
+                }
+            }
             return View("Login");
         }
 
         [Action("Login", Method = MethodType.POST)]
-        public async Task<IActionResult> Login(LoginModel model)
+        public async Task<IActionResult> Login(LoginModel model, string loginkeeping)
         {
-            if (ModelBindingState.IsAllSet)
+            if (ModelBindingState.IsSet("model"))
             {
                 List<User> users = new List<User>();
                 var query = _db.Get<User>();
@@ -54,12 +71,22 @@ namespace BRD_Sport_Sem.Controllers
                     if (model.GetPasswordHash() == user.Password)
                     {
                         await Authenticate(model.Email);
+                        if (loginkeeping == "loginkeeping")
+                        {
+                            await RememberMe(model);
+                        }
                         return Redirect(Url("~/Account/Profile"));
                     }
                 }
             }
 
             return Redirect(Url("~/Account/Login"));
+        }
+
+        private async Task RememberMe(LoginModel model)
+        {
+            Context.Response.Cookies.Append("name", model.Email);
+            Context.Response.Cookies.Append("password", model.GetPasswordHash());
         }
 
         private async Task Authenticate(string modelEmail)
@@ -70,6 +97,9 @@ namespace BRD_Sport_Sem.Controllers
         [Action("Register", Method = MethodType.GET)]
         public IActionResult Register()
         {
+            var token = Context.Session.GetString("AuthToken");
+            if (token != null)
+                return Redirect(Url("~/Account/Profile"));
             return View("Register");
         }
 

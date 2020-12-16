@@ -30,7 +30,7 @@ namespace BRD_Sport_Sem
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
-            IControllerActivator controllerActivator, IActionActivator actionActivator,IConfiguration configuration)
+            IControllerActivator controllerActivator, IActionActivator actionActivator, IConfiguration configuration)
         {
             if (env.IsDevelopment())
             {
@@ -41,10 +41,10 @@ namespace BRD_Sport_Sem
                 app.UseExceptionHandler("/Error");
                 //app.UseHsts();
             }
-            
+
             DataGateORM.Connect(configuration.GetConnectionString("postgres"));
             TableRegistry();
-            
+
             app.UseSession();
 
             _routeHelper = new RouteHelper(controllerActivator, actionActivator);
